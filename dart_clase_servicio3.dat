@@ -1,0 +1,26 @@
+class Cliente {
+  String nombre;
+  String apellido;
+  String direccion;
+  String comuna;
+  String ciudad;
+  String telefono;
+  String correo;
+  int saldo;
+          Cliente(this.nombre,this.apellido,this.direccion,this.comuna,this.ciudad,this.telefono,this.correo,this.saldo);
+   Cliente.pos({required this.nombre,required this.apellido,required this.direccion,this.comuna="sin comuna",required this.ciudad,required this.telefono,required this.correo,required this.saldo});
+}
+
+void main() {
+  var john=Cliente("john","doe","las condes","calle #5","Santiago","aaa@aaa.com","5555-5",0);
+  var peter=Cliente.pos(apellido:"parker",
+                        nombre:"peter",
+                        direccion:"sunset blv #33",                        
+                        comuna:"las condes",
+                        ciudad:"santiago",
+                        correo:"aaa@aaa.com",
+                        telefono:"222222",
+                        saldo:0);
+  print(john);
+  print(peter);
+}
